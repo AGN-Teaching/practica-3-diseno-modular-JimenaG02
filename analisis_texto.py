@@ -16,16 +16,9 @@ def contar_oraciones(texto):
 
 def contar_palabras(texto):
     palabras = 0
-    en_palabra = False
     for caracter in texto:
         if caracter.isspace() or caracter in ".!?,;:":
-            en_palabra = False
             palabras += 1
-        elif not en_palabra:
-            palabras += 1
-            en_palabra = True
-        else:
-            print()
     return palabras
 
 def contar_silabas(texto):
