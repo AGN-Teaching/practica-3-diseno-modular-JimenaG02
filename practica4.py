@@ -1,6 +1,6 @@
 """
 Programa: practica4.py
-Autora:
+Autora: Jimena Garcia
 
 Lee el texto de un archivo y usa el módulo legibilidad
 para calcular el índice de Velázquez Gaytán y para
