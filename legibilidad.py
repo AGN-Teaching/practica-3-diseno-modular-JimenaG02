@@ -7,17 +7,17 @@ Debe devolver el nivel como un string.
 
 """
 def indice_legibilidad_VG(texto):
-
+    #Mandamos a llamar las funciones del modulo "analisis_texto.py" para poder trabajar con ellas y sacar los valores de oraciones, palabras y silabas
     oraciones = at.contar_oraciones(texto)
     palabras = at.contar_palabras(texto)
     silabas = at.contar_silabas(texto)
-
-    L = 206.84 - 1.02 *(palabras / oraciones) - 60 *(silabas / palabras)
+    
+    L = 206.84 - 1.02 *(palabras / oraciones) - 60 *(silabas / palabras) #Formula Indice de Velazquez Gaytan
 
     return oraciones,palabras,silabas,L
 
 
-def nivel_legibilidad_VG(indice):
+def nivel_legibilidad_VG(indice): #Determina el nivel de legibilidad segun el indice
     nivel = ""
     if indice >=90 and indice <=100:
         nivel = "Muy facil"
